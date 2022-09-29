@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="no-js" lang="PT-BR">
+
+<head>
+    <title>Calculadora do Teorema de Pitágoras</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Challenge - Pythagoras Calculator">
+    <meta name="author" content="Bruna Stefani Moreira Torres Francisco">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/pixelcave.css">
+
+
+</head>
+
+<body>
+
+    <img src="img/background.jpg" alt="Full Background" class="full-bg animation-pulseSlow">
+
+    <div>
+
+        <div id="div-container">
+            <h3 class="h2 text-light text-center push-top-bottom animation-pullDown">
+                <div class="" alt="Teorema de Pitagoras"></div><img src="img/teorema_pitagoras.png" class="float-start"  width="200px" />
+            </h3>
+
+            <div class="block animation-fadeInQuickInv">
+
+                <div class="block-title">
+                    <div class="block-options pull-right">
+                    </div>
+                    <h2>Calculadora do Teorema Pitágoras</h2>
+                </div>
+
+                <form onsubmit="return false" class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input type="text" id="ca" name="ca" class="form-control mask"
+                                placeholder="Valor do Cateto Adjacente">
+                            <span class="text-danger display-none" id="alertaUm"><i>O campo Valor do Cateto Adjacente é
+                                    obrigatório!!</i></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input type="text" id="co" name="co" class="form-control mask"
+                                placeholder="Valor do Cateto Oposto">
+                            <span class="text-danger display-none" id="alertaDois"><i>O campo Valor do Cateto Oposto é
+                                    obrigatório!!</i></span>
+                        </div>
+                    </div>
+
+                    <div class="row push">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary btn-sm btn-block" id="calc" onclick="calcularHipotenusa()">
+                                <h4>Calcular</h4>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input type="value" id="result" name="result" class="form-control"
+                                placeholder="O valor da hipotenusa é" disabled="disabled">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <footer class="text-muted text-center animation-pullUp">
+                <small><span>2022</span> &copy; 
+                    <a href="https://www.linkedin.com/in/bruna-moreira-torres-francisco/" target="_blank">Bruna Moreira Francisco</a>
+                </small>
+            </footer>
+
+        </div>
+
+        <script src="js/lib/jquery-2.2.4.min.js"></script>
+        <script src="js/lib/inputmask.bundle.min.js"></script>
+        <script src="js/lib/bootstrap.min.js"></script>
+        <script src="js/pages/index.js"></script>
+        <script>
+            $(document).ready(function () {
+                aplicarMascaras();
+            });
+        </script>
+</body>
+
+</html>
